@@ -1,0 +1,23 @@
+@import "../utilits/mixins";
+@import "../utilits/variables";
+
+.navigation {
+  @include align-container(flex, true, false);
+  padding-top: 20px;
+
+  ul {
+    @include align-container(flex, false, false);
+    list-style: none;
+
+    li {
+      @include shadow-text(#fff, #000);
+      font-size: $text-size-small;
+      cursor: pointer;
+      margin: 1rem;
+    }
+  }
+}
+
+.navigation__list-icon {
+  margin: 0px 10px;
+}

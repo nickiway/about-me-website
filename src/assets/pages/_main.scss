@@ -1,0 +1,15 @@
+@import "../utilits/variables.scss";
+$bg-img: url("../../assets/images/layered-wave-right.svg");
+
+body {
+  background-color: $background-color;
+  background-image: $bg-img;
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.main > * {
+  padding: 0 2rem;
+  color: #fff;
+}

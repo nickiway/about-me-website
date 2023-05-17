@@ -1,0 +1,45 @@
+@import "../utilits/variables";
+@import "../utilits/mixins";
+
+@mixin main-greetings($paddingY, $paddingX, $font-size, $transform) {
+  padding: $paddingY $paddingX;
+  font-size: $font-size;
+  text-transform: $transform;
+}
+
+.text-typing {
+  min-height: 400px;
+  padding: 0px 1rem;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 3px;
+  @include align-container(flex, center, false);
+  @include shadow-text(#fff, #000);
+
+  &__text {
+    @include align-container(inline-block, false, false);
+    @include main-greetings(10px, 0, $text-size-large, capitalize);
+  }
+
+  &__paragraph {
+    @include main-greetings(10px, 0, $text-size-small, uppercase);
+  }
+
+  &__greetings {
+    @include main-greetings(10px, 0, $text-size-middle, uppercase);
+  }
+
+  &__name {
+    color: $text-color;
+  }
+
+  &__cursor {
+    transition: 0.3s;
+  }
+
+  .active {
+    color: gray;
+    opacity: 0.3;
+    transition: 0.3s;
+  }
+}
